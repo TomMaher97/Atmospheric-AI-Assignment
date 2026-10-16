@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 #%%
-data_dir = Path(r"C:\Users\tom_m\OneDrive\Documents\Coding Projects\Atmospheric AI assignment\Connectivity Data Science Take Home - Atmospheric AI (1)\data")
+data_dir = Path(__file__)
 
 df = {f.stem: pd.read_csv(f) for f in data_dir.glob("*.csv")}
 
