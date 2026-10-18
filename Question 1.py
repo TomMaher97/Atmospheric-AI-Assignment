@@ -8,11 +8,10 @@ Created on Sun Oct 11 12:17:07 2026
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from pathlib import Path
 
 #%%
-data_dir = Path(__file__)
+data_dir = Path(__file__).parent # folder containing this script and the CSV files
 
 df = {f.stem: pd.read_csv(f) for f in data_dir.glob("*.csv")}
 
